@@ -1,11 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">   <!-- <meta> gives info about page charset="UTF-8" allows all languages-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport makes site responsive-->
+  <title>HTML Quick Notes</title>
 </head>
 <body>
-    <h1> Welcome to HTML </h1>
+  <header>Header Section</header>
+
+  <!-- ================== BASICS ================== -->
+  <h1> Main Heading </h1>
+  <h2> Sub Heading </h2>
+  <h6> Smallest Heading </h6>
+  <p> This is a paragraph. </p>
+  <pre> This is Pre-fomattered paragraph </pre>
+  Line 1 <br> Line 2 <br>
+
+  <!-- Text formatting -->
+  <b>Bold</b> 
+  <i>Italic</i>
+  <u>Underline</u>
+  <mark>Highlight</mark>
+  <small>Small text</small>
+  <sub>Subscript</sub>
+  <sup>Superscript</sup>
+  <strong>Strong Text</strong>
+  <del>Deleted text</del>
+  <br>
+
+  <!-- Links--> 
+  <a href="https://example.com" target="_blank"> Visit Example </a>
+  <br>
+
+  <!-- and images -->
+  <img src="image.jpg" alt="Description of image" width="150">
+  <br>
+
+  <!-- Audio -->
+  <audio controls autoplay muted loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Browser does not support audio.
+  </audio>
+  <br>
+
+  <!-- Video -->
+  <video width="300" controls autoplay muted loop>
+    <source src="movie.mp4" type="video/mp4" >
+    Browser does not support video.
+  </video>
+
+  <!-- Lists -->
+  <ul> <!-- unordered list (bullets) -->
+    <li>Item A</li>
+    <li>Item B</li>
+  </ul>
+
+  <ol type="1"> <!-- ordered list (numbers, can use A, a, I, i) -->
+    <li>First</li>
+    <li>Second</li>
+  </ol>
+
+    <ul> <!--Nested list-->
+    <li>Fruit
+      <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+      </ul>
+    </li>
+    <li>Vegetables
+      <ul>
+        <li>Carrot</li>
+        <li>Potato</li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- Table -->
+  <table border="1">
+    <tr> <!--Table row-->
+      <th>Name</th><th>Age</th> <!--Table header-->
+    </tr>
+    <tr>
+      <td>Alice</td><td>21</td> <!--Table data-->
+    </tr>
+    <tr>
+      <td>Alice</td><td>21</td> <!--Table data-->
+    </tr>
+  </table>
+  <br>
+
+    <!--Button-->
+    <button> Click me </button>
+    <br>
+
+    <!-- Div and Span (grouping elements) -->
+    <div style="border:1px solid black; padding:10px;">
+        <span style="color:red;">Red word for span </span> inside a box for Div
+    </div>
+    <br>
+
+    <!-- Inline CSS -->
+    <p style="color:blue; font-size:20px;">Styled Text for Inline Css </p>
+
+    <!-- IDs and Classes (important for CSS + JS) -->
+    <p id="uniqueID">This has an ID</p>
+    <p class="commonClass">This has a Class</p>
+
+    <!-- Iframe (embed another page) -->
+    <iframe src="https://www.wikipedia.org" width="400" height="300" title="YouTube video" frameborder="1" ></iframe>
+    
+
+
+
+  <!-- ================== FORMS ================== -->
+  <form action="submit.php" method="POST">
+    <!-- input types -->
+    <label for="username">Enter your name: </label>
+
+    <input id="username" type="text" placeholder="Your Name" required><br>
+    <input type="email" placeholder="Email"><br>
+    <input type="password" placeholder="Password" minlength="4"><br>
+    <input type="number" placeholder="Age"><br>
+    <input type="checkbox" checked> Accept Terms <br>
+    <input type="radio" name="gender" value="male"> Male
+    <input type="radio" name="gender" value="female"> Female <br>
+
+    <label> Birthday ;</label>
+    <input type="date" ><br>
+
+    <select>
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select><br>
+    <textarea placeholder="Your message"></textarea><br>
+    
+    <label  for="file">File :</label>
+    <input id="file" type="file"><br>
+
+    <input type="submit" value="Submit"> <br>
+    <input type="reset">
+  </form>
+
+  <!-- ================== SEMANTIC ELEMENTS ================== -->
+  <!-- semantic tags improve SEO + accessibility -->
+  <nav>Navigation Links</nav>
+  <main>Main Content</main>
+  <section>Content Section</section>
+  <article>Article/Blog</article>
+  <aside>Sidebar</aside>
+  <footer>Footer Section</footer>
+
+  <!-- ================== ADVANCED ================== -->
+
+
+  <!-- HTML Entities (special characters) -->
+  &copy; 2025 All rights reserved <br>
+
+  <!-- ================== EXTRA NOTES ================== -->
+  <!-- 
+    - <!DOCTYPE html> : tells browser it's HTML5
+    - <head> : metadata (not shown on page)
+    - <body> : content visible to users
+    - Block elements (div, p, h1...) take full width
+    - Inline elements (span, a, b...) take only required space
+    - Self-closing tags: <img>, <br>, <hr>, <input>, <meta>, <link>
+    - Accessibility: always use alt="" for images
+  -->
+
+  <!--This is Full Note of HTML-->
 </body>
 </html>
