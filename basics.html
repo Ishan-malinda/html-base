@@ -1,172 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">   <!-- <meta> gives info about page charset="UTF-8" allows all languages-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport makes site responsive-->
-  <title>HTML Quick Notes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering HTML5: Core Concepts</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+        section { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+    </style>
 </head>
 <body>
-  <header>Header Section</header>
 
-  <!-- ================== BASICS ================== -->
-  <h1> Main Heading </h1>
-  <h2> Sub Heading </h2>
-  <h6> Smallest Heading </h6>
-  <p> This is a paragraph. </p>
-  <pre> This is Pre-fomattered paragraph </pre>
-  Line 1 <br> Line 2 <br>
+    <header>
+        <h1>HTML5 Reference Guide</h1>
+        <nav>
+            <a href="#basics">Basics</a> | 
+            <a href="#media">Media</a> | 
+            <a href="#forms">Forms</a> | 
+            <a href="#semantic">Semantic</a>
+        </nav>
+    </header>
 
-  <!-- Text formatting -->
-  <b>Bold</b> 
-  <i>Italic</i>
-  <u>Underline</u>
-  <mark>Highlight</mark>
-  <small>Small text</small>
-  <sub>Subscript</sub>
-  <sup>Superscript</sup>
-  <strong>Strong Text</strong>
-  <del>Deleted text</del>
-  <br>
+    <main>
+        <section id="basics">
+            <h2>01. Text & Layout Basics</h2>
+            <p>Standard paragraph with <strong>strong</strong> and <em>emphasized</em> text.</p>
+            <pre>Pre-formatted text preserves   spaces and line breaks.</pre>
+            
+            <h3>Headings</h3>
+            <h1>H1: Main Title</h1>
+            <h6>H6: Smallest Sub-heading</h6>
 
-  <!-- Links--> 
-  <a href="https://example.com" target="_blank"> Visit Example </a>
-  <br>
+            <h3>Lists</h3>
+            <ul>
+                <li>Unordered Item with <code>&lt;ul&gt;</code></li>
+                <li>Nested List:
+                    <ol>
+                        <li>Ordered Step 1</li>
+                        <li>Ordered Step 2</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
 
-  <!-- and images -->
-  <img src="image.jpg" alt="Description of image" width="150">
-  <br>
+        <section id="media">
+            <h2>02. Multimedia & Links</h2>
+            <a href="https://example.com" target="_blank">External Link (New Tab)</a>
+            <br><br>
+            <figure>
+                <img src="image.jpg" alt="Describe image for accessibility" width="300">
+                <figcaption>Figure: Proper image implementation</figcaption>
+            </figure>
 
-  <!-- Audio -->
-  <audio controls autoplay muted loop>
-    <source src="song.mp3" type="audio/mpeg">
-    Browser does not support audio.
-  </audio>
-  <br>
+            <h3>Video & Audio Controls</h3>
+            <video width="100%" controls muted>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-  <!-- Video -->
-  <video width="300" controls autoplay muted loop>
-    <source src="movie.mp4" type="video/mp4" >
-    Browser does not support video.
-  </video>
+        <section id="forms">
+            <h2>03. Interactive Forms</h2>
+            <form action="/submit" method="POST">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
 
-  <!-- Lists -->
-  <ul> <!-- unordered list (bullets) -->
-    <li>Item A</li>
-    <li>Item B</li>
-  </ul>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I accept the terms</label>
+                    <br>
+                    <label>Gender:</label>
+                    <input type="radio" id="m" name="gen" value="m"><label for="m">Male</label>
+                    <input type="radio" id="f" name="gen" value="f"><label for="f">Female</label>
+                </fieldset>
 
-  <ol type="1"> <!-- ordered list (numbers, can use A, a, I, i) -->
-    <li>First</li>
-    <li>Second</li>
-  </ol>
+                <button type="submit">Send Data</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
 
-    <ul> <!--Nested list-->
-    <li>Fruit
-      <ul>
-        <li>Apple</li>
-        <li>Mango</li>
-      </ul>
-    </li>
-    <li>Vegetables
-      <ul>
-        <li>Carrot</li>
-        <li>Potato</li>
-      </ul>
-    </li>
-  </ul>
+        <section id="tables">
+            <h2>04. Data Tables</h2>
+            <table border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Tag</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Metadata</td>
+                        <td><code>&lt;meta&gt;</code></td>
+                        <td>Page info</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-  <!-- Table -->
-  <table border="1">
-    <tr> <!--Table row-->
-      <th>Name</th><th>Age</th> <!--Table header-->
-    </tr>
-    <tr>
-      <td>Alice</td><td>21</td> <!--Table data-->
-    </tr>
-    <tr>
-      <td>Alice</td><td>21</td> <!--Table data-->
-    </tr>
-  </table>
-  <br>
+    <footer>
+        <p>&copy; 2025 HTML Base Repository. Created for learning purposes.</p>
+    </footer>
 
-    <!--Button-->
-    <button> Click me </button>
-    <br>
-
-    <!-- Div and Span (grouping elements) -->
-    <div style="border:1px solid black; padding:10px;">
-        <span style="color:red;">Red word for span </span> inside a box for Div
-    </div>
-    <br>
-
-    <!-- Inline CSS -->
-    <p style="color:blue; font-size:20px;">Styled Text for Inline Css </p>
-
-    <!-- IDs and Classes (important for CSS + JS) -->
-    <p id="uniqueID">This has an ID</p>
-    <p class="commonClass">This has a Class</p>
-
-    <!-- Iframe (embed another page) -->
-    <iframe src="https://www.wikipedia.org" width="400" height="300" title="YouTube video" frameborder="1" ></iframe>
-    
-
-
-
-  <!-- ================== FORMS ================== -->
-  <form action="submit.php" method="POST">
-    <!-- input types -->
-    <label for="username">Enter your name: </label>
-
-    <input id="username" type="text" placeholder="Your Name" required><br>
-    <input type="email" placeholder="Email"><br>
-    <input type="password" placeholder="Password" minlength="4"><br>
-    <input type="number" placeholder="Age"><br>
-    <input type="checkbox" checked> Accept Terms <br>
-    <input type="radio" name="gender" value="male"> Male
-    <input type="radio" name="gender" value="female"> Female <br>
-
-    <label> Birthday ;</label>
-    <input type="date" ><br>
-
-    <select>
-      <option>Option 1</option>
-      <option>Option 2</option>
-    </select><br>
-    <textarea placeholder="Your message"></textarea><br>
-    
-    <label  for="file">File :</label>
-    <input id="file" type="file"><br>
-
-    <input type="submit" value="Submit"> <br>
-    <input type="reset">
-  </form>
-
-  <!-- ================== SEMANTIC ELEMENTS ================== -->
-  <!-- semantic tags improve SEO + accessibility -->
-  <nav>Navigation Links</nav>
-  <main>Main Content</main>
-  <section>Content Section</section>
-  <article>Article/Blog</article>
-  <aside>Sidebar</aside>
-  <footer>Footer Section</footer>
-
-  <!-- ================== ADVANCED ================== -->
-
-
-  <!-- HTML Entities (special characters) -->
-  &copy; 2025 All rights reserved <br>
-
-  <!-- ================== EXTRA NOTES ================== -->
-  <!-- 
-    - <!DOCTYPE html> : tells browser it's HTML5
-    - <head> : metadata (not shown on page)
-    - <body> : content visible to users
-    - Block elements (div, p, h1...) take full width
-    - Inline elements (span, a, b...) take only required space
-    - Self-closing tags: <img>, <br>, <hr>, <input>, <meta>, <link>
-    - Accessibility: always use alt="" for images
-  -->
-
-  <!--This is Full Note of HTML-->
 </body>
 </html>
